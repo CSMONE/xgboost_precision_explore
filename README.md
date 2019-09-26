@@ -187,8 +187,8 @@ np.float32(sigmoid(np.float32(python_predict['python所有叶节点和']))).asty
 <Segment id="1">
 ...
         <Output>
-			<OutputField name="xgbValue" optype="continuous" dataType="float" feature="predictedValue" isFinalResult="false"/>
-		</Output>
+		<OutputField name="xgbValue" optype="continuous" dataType="float" feature="predictedValue" isFinalResult="false"/>
+	</Output>
 ...
 </Segment>
 ```
@@ -198,14 +198,14 @@ np.float32(sigmoid(np.float32(python_predict['python所有叶节点和']))).asty
 <Segment id="2">
 ...
     <RegressionModel functionName="classification" normalizationMethod="logit" x-mathContext="float">
-		<MiningSchema>
-			<MiningField name="SURVIVED" usageType="target"/>
-						<MiningField name="xgbValue"/>
-		</MiningSchema>
+	<MiningSchema>
+		<MiningField name="SURVIVED" usageType="target"/>
+		<MiningField name="xgbValue"/>
+	</MiningSchema>
         <Output>
-			<OutputField name="probability(0)" optype="continuous" dataType="float" feature="probability" value="0"/>
-			<OutputField name="probability(1)" optype="continuous" dataType="float" feature="probability" value="1"/>
-		</Output>
+		<OutputField name="probability(0)" optype="continuous" dataType="float" feature="probability" value="0"/>
+		<OutputField name="probability(1)" optype="continuous" dataType="float" feature="probability" value="1"/>
+	</Output>
 ...
 </Segment>
 ```
