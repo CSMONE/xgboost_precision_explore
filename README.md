@@ -8,6 +8,7 @@
 1. __XGBoost使用的是32位浮点，而其他模型是64位浮点，这个本质区别会使两者的精度差异不同。__
 2. __XGboost预测结果是由这两步得到的：经过所有子树路径的叶结点值统计和 ==》 使用sigmoid函数将和转换为概率值。__
 
+__下面测试过程可以 test/xgboost_precision_explore.py 中复现。__
 
 ## 1. XGboost python与pmml文件的预测
 
