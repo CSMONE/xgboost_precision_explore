@@ -1,0 +1,4121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_3" xmlns:data="http://jpmml.org/jpmml-model/InlineTable" version="4.3">
+	<Header>
+		<Application name="JPMML-SkLearn" version="1.5.12"/>
+		<Timestamp>2019-09-26T01:50:44Z</Timestamp>
+	</Header>
+	<MiningBuildTask>
+		<Extension>PMMLPipeline(steps=[('mapper', DataFrameMapper(default=False, df_out=False,
+        features=[(['PCLASS', 'AGE', 'SIBSP', 'PARCH', 'FARE'], None), (['NAME'], [CategoricalDomain(invalid_value_replacement=None,
+         invalid_value_treatment='as_is', missing_value_replacement=None,
+         missing_value_treatment='as_is', missing_values=None,
+         with_data=True, with_statisti...       dtype=&lt;class 'numpy.float64'&gt;, handle_unknown='ignore',
+       n_values=None, sparse=True)])],
+        input_df=False, sparse=False)),
+       ('model', XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=0, learning_rate=0.1, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=100,
+       n_jobs=1, nthread=None, objective='binary:logistic',
+       random_state=1234, reg_alpha=0, reg_lambda=1, scale_pos_weight=1,
+       seed=None, silent=True, subsample=1))])</Extension>
+	</MiningBuildTask>
+	<DataDictionary>
+		<DataField name="SURVIVED" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="1"/>
+		</DataField>
+		<DataField name="PCLASS" optype="continuous" dataType="double"/>
+		<DataField name="AGE" optype="continuous" dataType="double"/>
+		<DataField name="SIBSP" optype="continuous" dataType="double"/>
+		<DataField name="PARCH" optype="continuous" dataType="double"/>
+		<DataField name="FARE" optype="continuous" dataType="double"/>
+		<DataField name="SEX" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="1"/>
+		</DataField>
+		<DataField name="TICKET" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="1"/>
+			<Value value="2"/>
+			<Value value="5"/>
+			<Value value="6"/>
+			<Value value="8"/>
+			<Value value="9"/>
+			<Value value="10"/>
+			<Value value="11"/>
+			<Value value="12"/>
+			<Value value="13"/>
+			<Value value="14"/>
+			<Value value="15"/>
+			<Value value="17"/>
+			<Value value="18"/>
+			<Value value="19"/>
+			<Value value="20"/>
+			<Value value="21"/>
+			<Value value="24"/>
+			<Value value="26"/>
+			<Value value="28"/>
+			<Value value="30"/>
+			<Value value="31"/>
+			<Value value="33"/>
+			<Value value="34"/>
+			<Value value="35"/>
+			<Value value="36"/>
+			<Value value="37"/>
+			<Value value="38"/>
+			<Value value="39"/>
+			<Value value="40"/>
+			<Value value="41"/>
+			<Value value="42"/>
+			<Value value="43"/>
+			<Value value="44"/>
+			<Value value="45"/>
+			<Value value="46"/>
+			<Value value="49"/>
+			<Value value="50"/>
+			<Value value="51"/>
+			<Value value="52"/>
+			<Value value="53"/>
+			<Value value="54"/>
+			<Value value="55"/>
+			<Value value="58"/>
+			<Value value="59"/>
+			<Value value="61"/>
+			<Value value="62"/>
+			<Value value="63"/>
+			<Value value="65"/>
+			<Value value="66"/>
+			<Value value="67"/>
+			<Value value="68"/>
+			<Value value="69"/>
+			<Value value="70"/>
+			<Value value="71"/>
+			<Value value="72"/>
+			<Value value="73"/>
+			<Value value="74"/>
+			<Value value="75"/>
+			<Value value="76"/>
+			<Value value="78"/>
+			<Value value="79"/>
+			<Value value="81"/>
+			<Value value="82"/>
+			<Value value="84"/>
+			<Value value="85"/>
+			<Value value="86"/>
+			<Value value="87"/>
+			<Value value="89"/>
+			<Value value="90"/>
+			<Value value="92"/>
+			<Value value="93"/>
+			<Value value="95"/>
+			<Value value="96"/>
+			<Value value="97"/>
+			<Value value="100"/>
+			<Value value="101"/>
+			<Value value="102"/>
+			<Value value="103"/>
+			<Value value="104"/>
+			<Value value="105"/>
+			<Value value="106"/>
+			<Value value="107"/>
+			<Value value="108"/>
+			<Value value="109"/>
+			<Value value="110"/>
+			<Value value="111"/>
+			<Value value="112"/>
+			<Value value="113"/>
+			<Value value="115"/>
+			<Value value="118"/>
+			<Value value="120"/>
+			<Value value="121"/>
+			<Value value="122"/>
+			<Value value="123"/>
+			<Value value="124"/>
+			<Value value="125"/>
+			<Value value="126"/>
+			<Value value="127"/>
+			<Value value="128"/>
+			<Value value="130"/>
+			<Value value="133"/>
+			<Value value="134"/>
+			<Value value="135"/>
+			<Value value="136"/>
+			<Value value="138"/>
+			<Value value="139"/>
+			<Value value="140"/>
+			<Value value="141"/>
+			<Value value="142"/>
+			<Value value="143"/>
+			<Value value="144"/>
+			<Value value="145"/>
+			<Value value="146"/>
+			<Value value="147"/>
+			<Value value="148"/>
+			<Value value="149"/>
+			<Value value="150"/>
+			<Value value="152"/>
+			<Value value="154"/>
+			<Value value="155"/>
+			<Value value="156"/>
+			<Value value="157"/>
+			<Value value="158"/>
+			<Value value="160"/>
+			<Value value="161"/>
+			<Value value="162"/>
+			<Value value="167"/>
+			<Value value="168"/>
+			<Value value="169"/>
+			<Value value="171"/>
+			<Value value="174"/>
+			<Value value="175"/>
+			<Value value="176"/>
+			<Value value="178"/>
+			<Value value="179"/>
+			<Value value="180"/>
+			<Value value="181"/>
+			<Value value="182"/>
+			<Value value="186"/>
+			<Value value="187"/>
+			<Value value="189"/>
+			<Value value="190"/>
+			<Value value="191"/>
+			<Value value="192"/>
+			<Value value="193"/>
+			<Value value="194"/>
+			<Value value="196"/>
+			<Value value="198"/>
+			<Value value="199"/>
+			<Value value="201"/>
+			<Value value="203"/>
+			<Value value="204"/>
+			<Value value="205"/>
+			<Value value="207"/>
+			<Value value="208"/>
+			<Value value="209"/>
+			<Value value="211"/>
+			<Value value="212"/>
+			<Value value="215"/>
+			<Value value="216"/>
+			<Value value="217"/>
+			<Value value="218"/>
+			<Value value="219"/>
+			<Value value="220"/>
+			<Value value="221"/>
+			<Value value="223"/>
+			<Value value="224"/>
+			<Value value="225"/>
+			<Value value="226"/>
+			<Value value="228"/>
+			<Value value="231"/>
+			<Value value="232"/>
+			<Value value="233"/>
+			<Value value="234"/>
+			<Value value="235"/>
+			<Value value="236"/>
+			<Value value="237"/>
+			<Value value="238"/>
+			<Value value="239"/>
+			<Value value="240"/>
+			<Value value="241"/>
+			<Value value="242"/>
+			<Value value="243"/>
+			<Value value="244"/>
+			<Value value="245"/>
+			<Value value="247"/>
+			<Value value="253"/>
+			<Value value="255"/>
+			<Value value="256"/>
+			<Value value="257"/>
+			<Value value="258"/>
+			<Value value="259"/>
+			<Value value="260"/>
+			<Value value="261"/>
+			<Value value="262"/>
+			<Value value="263"/>
+			<Value value="265"/>
+			<Value value="266"/>
+			<Value value="267"/>
+			<Value value="269"/>
+			<Value value="272"/>
+			<Value value="273"/>
+			<Value value="275"/>
+			<Value value="278"/>
+			<Value value="280"/>
+			<Value value="281"/>
+			<Value value="282"/>
+			<Value value="284"/>
+			<Value value="285"/>
+			<Value value="286"/>
+			<Value value="288"/>
+			<Value value="289"/>
+			<Value value="290"/>
+			<Value value="292"/>
+			<Value value="294"/>
+			<Value value="295"/>
+			<Value value="296"/>
+			<Value value="297"/>
+			<Value value="298"/>
+			<Value value="302"/>
+			<Value value="303"/>
+			<Value value="304"/>
+			<Value value="305"/>
+			<Value value="307"/>
+			<Value value="308"/>
+			<Value value="310"/>
+			<Value value="311"/>
+			<Value value="312"/>
+			<Value value="313"/>
+			<Value value="314"/>
+			<Value value="316"/>
+			<Value value="317"/>
+			<Value value="318"/>
+			<Value value="319"/>
+			<Value value="320"/>
+			<Value value="321"/>
+			<Value value="323"/>
+			<Value value="324"/>
+			<Value value="325"/>
+			<Value value="326"/>
+			<Value value="327"/>
+			<Value value="328"/>
+			<Value value="330"/>
+			<Value value="331"/>
+			<Value value="332"/>
+			<Value value="333"/>
+			<Value value="334"/>
+			<Value value="335"/>
+			<Value value="336"/>
+			<Value value="338"/>
+			<Value value="339"/>
+			<Value value="340"/>
+			<Value value="341"/>
+			<Value value="342"/>
+			<Value value="343"/>
+			<Value value="344"/>
+			<Value value="345"/>
+			<Value value="346"/>
+			<Value value="348"/>
+			<Value value="350"/>
+			<Value value="352"/>
+			<Value value="353"/>
+			<Value value="354"/>
+			<Value value="357"/>
+			<Value value="358"/>
+			<Value value="360"/>
+			<Value value="361"/>
+			<Value value="362"/>
+			<Value value="363"/>
+			<Value value="365"/>
+			<Value value="368"/>
+			<Value value="369"/>
+			<Value value="370"/>
+			<Value value="373"/>
+			<Value value="374"/>
+			<Value value="377"/>
+			<Value value="379"/>
+			<Value value="381"/>
+			<Value value="382"/>
+			<Value value="383"/>
+			<Value value="384"/>
+			<Value value="385"/>
+			<Value value="390"/>
+			<Value value="391"/>
+			<Value value="392"/>
+			<Value value="395"/>
+			<Value value="397"/>
+			<Value value="398"/>
+			<Value value="399"/>
+			<Value value="401"/>
+			<Value value="402"/>
+			<Value value="403"/>
+			<Value value="407"/>
+			<Value value="408"/>
+			<Value value="409"/>
+			<Value value="411"/>
+			<Value value="412"/>
+			<Value value="413"/>
+			<Value value="416"/>
+			<Value value="417"/>
+			<Value value="418"/>
+			<Value value="419"/>
+			<Value value="420"/>
+			<Value value="422"/>
+			<Value value="423"/>
+			<Value value="425"/>
+			<Value value="426"/>
+			<Value value="428"/>
+			<Value value="429"/>
+			<Value value="430"/>
+			<Value value="431"/>
+			<Value value="432"/>
+			<Value value="433"/>
+			<Value value="434"/>
+			<Value value="436"/>
+			<Value value="437"/>
+			<Value value="438"/>
+			<Value value="439"/>
+			<Value value="440"/>
+			<Value value="441"/>
+			<Value value="444"/>
+			<Value value="445"/>
+			<Value value="446"/>
+			<Value value="448"/>
+			<Value value="450"/>
+			<Value value="451"/>
+			<Value value="453"/>
+			<Value value="454"/>
+			<Value value="455"/>
+			<Value value="457"/>
+			<Value value="458"/>
+			<Value value="459"/>
+			<Value value="460"/>
+			<Value value="461"/>
+			<Value value="463"/>
+			<Value value="464"/>
+			<Value value="465"/>
+			<Value value="468"/>
+			<Value value="469"/>
+			<Value value="471"/>
+			<Value value="473"/>
+			<Value value="475"/>
+			<Value value="477"/>
+			<Value value="478"/>
+			<Value value="479"/>
+			<Value value="481"/>
+			<Value value="482"/>
+			<Value value="484"/>
+			<Value value="486"/>
+			<Value value="487"/>
+			<Value value="488"/>
+			<Value value="489"/>
+			<Value value="490"/>
+			<Value value="491"/>
+			<Value value="492"/>
+			<Value value="493"/>
+			<Value value="495"/>
+			<Value value="496"/>
+			<Value value="497"/>
+			<Value value="498"/>
+			<Value value="499"/>
+			<Value value="500"/>
+			<Value value="501"/>
+			<Value value="502"/>
+			<Value value="504"/>
+			<Value value="505"/>
+			<Value value="506"/>
+			<Value value="507"/>
+			<Value value="508"/>
+			<Value value="510"/>
+			<Value value="511"/>
+			<Value value="514"/>
+			<Value value="516"/>
+			<Value value="517"/>
+			<Value value="519"/>
+			<Value value="520"/>
+			<Value value="522"/>
+			<Value value="523"/>
+			<Value value="524"/>
+			<Value value="525"/>
+			<Value value="526"/>
+			<Value value="527"/>
+			<Value value="528"/>
+			<Value value="529"/>
+			<Value value="530"/>
+			<Value value="531"/>
+			<Value value="532"/>
+			<Value value="534"/>
+			<Value value="535"/>
+			<Value value="536"/>
+			<Value value="537"/>
+			<Value value="539"/>
+			<Value value="540"/>
+			<Value value="541"/>
+			<Value value="542"/>
+			<Value value="544"/>
+			<Value value="545"/>
+			<Value value="546"/>
+			<Value value="547"/>
+			<Value value="549"/>
+			<Value value="550"/>
+			<Value value="551"/>
+			<Value value="552"/>
+			<Value value="553"/>
+			<Value value="555"/>
+			<Value value="556"/>
+			<Value value="557"/>
+			<Value value="558"/>
+			<Value value="559"/>
+			<Value value="562"/>
+			<Value value="564"/>
+			<Value value="566"/>
+			<Value value="567"/>
+			<Value value="572"/>
+			<Value value="573"/>
+			<Value value="574"/>
+			<Value value="575"/>
+			<Value value="576"/>
+			<Value value="577"/>
+			<Value value="580"/>
+			<Value value="581"/>
+			<Value value="583"/>
+			<Value value="584"/>
+			<Value value="585"/>
+			<Value value="587"/>
+			<Value value="588"/>
+			<Value value="589"/>
+			<Value value="590"/>
+			<Value value="591"/>
+			<Value value="592"/>
+			<Value value="593"/>
+			<Value value="594"/>
+			<Value value="595"/>
+			<Value value="596"/>
+			<Value value="597"/>
+			<Value value="598"/>
+			<Value value="602"/>
+			<Value value="603"/>
+			<Value value="606"/>
+			<Value value="608"/>
+			<Value value="610"/>
+			<Value value="611"/>
+			<Value value="612"/>
+			<Value value="613"/>
+			<Value value="614"/>
+			<Value value="615"/>
+			<Value value="616"/>
+			<Value value="620"/>
+			<Value value="621"/>
+			<Value value="622"/>
+			<Value value="624"/>
+			<Value value="626"/>
+			<Value value="627"/>
+			<Value value="628"/>
+			<Value value="629"/>
+			<Value value="630"/>
+			<Value value="632"/>
+			<Value value="633"/>
+			<Value value="635"/>
+			<Value value="636"/>
+			<Value value="637"/>
+			<Value value="638"/>
+			<Value value="639"/>
+			<Value value="641"/>
+			<Value value="642"/>
+			<Value value="643"/>
+			<Value value="644"/>
+			<Value value="646"/>
+			<Value value="647"/>
+			<Value value="648"/>
+			<Value value="649"/>
+			<Value value="650"/>
+			<Value value="651"/>
+			<Value value="652"/>
+			<Value value="654"/>
+			<Value value="655"/>
+			<Value value="656"/>
+			<Value value="658"/>
+			<Value value="659"/>
+			<Value value="661"/>
+			<Value value="664"/>
+			<Value value="665"/>
+			<Value value="666"/>
+			<Value value="667"/>
+			<Value value="669"/>
+			<Value value="670"/>
+			<Value value="671"/>
+			<Value value="672"/>
+			<Value value="673"/>
+			<Value value="674"/>
+			<Value value="675"/>
+			<Value value="676"/>
+			<Value value="677"/>
+			<Value value="678"/>
+			<Value value="679"/>
+			<Value value="680"/>
+			<Value value="681"/>
+			<Value value="683"/>
+			<Value value="684"/>
+			<Value value="686"/>
+			<Value value="688"/>
+			<Value value="690"/>
+			<Value value="691"/>
+			<Value value="693"/>
+			<Value value="694"/>
+			<Value value="695"/>
+			<Value value="697"/>
+			<Value value="698"/>
+			<Value value="699"/>
+			<Value value="701"/>
+			<Value value="702"/>
+			<Value value="704"/>
+			<Value value="706"/>
+			<Value value="707"/>
+			<Value value="709"/>
+			<Value value="710"/>
+			<Value value="713"/>
+			<Value value="714"/>
+			<Value value="716"/>
+			<Value value="717"/>
+			<Value value="718"/>
+			<Value value="720"/>
+			<Value value="721"/>
+			<Value value="722"/>
+			<Value value="723"/>
+			<Value value="725"/>
+			<Value value="726"/>
+			<Value value="727"/>
+			<Value value="728"/>
+			<Value value="729"/>
+			<Value value="730"/>
+			<Value value="731"/>
+			<Value value="732"/>
+			<Value value="733"/>
+			<Value value="734"/>
+			<Value value="735"/>
+			<Value value="736"/>
+			<Value value="737"/>
+			<Value value="738"/>
+			<Value value="742"/>
+			<Value value="743"/>
+			<Value value="744"/>
+			<Value value="745"/>
+			<Value value="746"/>
+			<Value value="748"/>
+			<Value value="749"/>
+			<Value value="750"/>
+			<Value value="751"/>
+			<Value value="752"/>
+			<Value value="753"/>
+			<Value value="754"/>
+			<Value value="755"/>
+			<Value value="756"/>
+			<Value value="758"/>
+			<Value value="761"/>
+			<Value value="762"/>
+			<Value value="763"/>
+			<Value value="764"/>
+			<Value value="766"/>
+			<Value value="768"/>
+			<Value value="769"/>
+			<Value value="772"/>
+			<Value value="773"/>
+			<Value value="774"/>
+			<Value value="775"/>
+			<Value value="777"/>
+			<Value value="778"/>
+			<Value value="779"/>
+			<Value value="781"/>
+			<Value value="782"/>
+			<Value value="783"/>
+			<Value value="786"/>
+			<Value value="787"/>
+			<Value value="789"/>
+			<Value value="790"/>
+			<Value value="791"/>
+			<Value value="792"/>
+			<Value value="793"/>
+			<Value value="794"/>
+			<Value value="795"/>
+			<Value value="796"/>
+			<Value value="797"/>
+			<Value value="798"/>
+			<Value value="800"/>
+			<Value value="802"/>
+			<Value value="803"/>
+			<Value value="805"/>
+			<Value value="806"/>
+			<Value value="807"/>
+			<Value value="809"/>
+			<Value value="810"/>
+			<Value value="812"/>
+			<Value value="813"/>
+			<Value value="814"/>
+			<Value value="816"/>
+			<Value value="817"/>
+			<Value value="818"/>
+			<Value value="819"/>
+			<Value value="820"/>
+			<Value value="821"/>
+			<Value value="824"/>
+			<Value value="825"/>
+			<Value value="826"/>
+			<Value value="827"/>
+			<Value value="828"/>
+			<Value value="830"/>
+			<Value value="831"/>
+			<Value value="832"/>
+			<Value value="833"/>
+			<Value value="834"/>
+			<Value value="835"/>
+			<Value value="836"/>
+			<Value value="837"/>
+			<Value value="838"/>
+			<Value value="839"/>
+			<Value value="840"/>
+			<Value value="841"/>
+			<Value value="844"/>
+			<Value value="845"/>
+			<Value value="847"/>
+			<Value value="848"/>
+			<Value value="849"/>
+			<Value value="850"/>
+			<Value value="852"/>
+			<Value value="855"/>
+			<Value value="856"/>
+			<Value value="857"/>
+			<Value value="858"/>
+			<Value value="859"/>
+			<Value value="860"/>
+			<Value value="863"/>
+			<Value value="866"/>
+			<Value value="868"/>
+			<Value value="869"/>
+			<Value value="870"/>
+			<Value value="871"/>
+			<Value value="874"/>
+			<Value value="875"/>
+			<Value value="876"/>
+			<Value value="879"/>
+			<Value value="880"/>
+			<Value value="881"/>
+			<Value value="884"/>
+			<Value value="885"/>
+			<Value value="886"/>
+			<Value value="888"/>
+			<Value value="889"/>
+			<Value value="890"/>
+			<Value value="891"/>
+			<Value value="892"/>
+			<Value value="894"/>
+			<Value value="895"/>
+			<Value value="896"/>
+			<Value value="898"/>
+			<Value value="899"/>
+			<Value value="900"/>
+			<Value value="901"/>
+			<Value value="902"/>
+			<Value value="903"/>
+			<Value value="904"/>
+			<Value value="905"/>
+			<Value value="906"/>
+			<Value value="908"/>
+			<Value value="909"/>
+			<Value value="910"/>
+			<Value value="912"/>
+			<Value value="913"/>
+			<Value value="914"/>
+			<Value value="915"/>
+			<Value value="916"/>
+			<Value value="918"/>
+			<Value value="919"/>
+			<Value value="921"/>
+			<Value value="923"/>
+			<Value value="924"/>
+			<Value value="925"/>
+			<Value value="926"/>
+			<Value value="927"/>
+			<Value value="928"/>
+		</DataField>
+		<DataField name="CABIN" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="2"/>
+			<Value value="3"/>
+			<Value value="5"/>
+			<Value value="6"/>
+			<Value value="8"/>
+			<Value value="9"/>
+			<Value value="10"/>
+			<Value value="12"/>
+			<Value value="13"/>
+			<Value value="14"/>
+			<Value value="15"/>
+			<Value value="16"/>
+			<Value value="17"/>
+			<Value value="18"/>
+			<Value value="21"/>
+			<Value value="22"/>
+			<Value value="24"/>
+			<Value value="25"/>
+			<Value value="26"/>
+			<Value value="27"/>
+			<Value value="30"/>
+			<Value value="31"/>
+			<Value value="32"/>
+			<Value value="33"/>
+			<Value value="35"/>
+			<Value value="36"/>
+			<Value value="37"/>
+			<Value value="38"/>
+			<Value value="39"/>
+			<Value value="40"/>
+			<Value value="42"/>
+			<Value value="43"/>
+			<Value value="44"/>
+			<Value value="45"/>
+			<Value value="47"/>
+			<Value value="48"/>
+			<Value value="50"/>
+			<Value value="51"/>
+			<Value value="52"/>
+			<Value value="53"/>
+			<Value value="54"/>
+			<Value value="55"/>
+			<Value value="56"/>
+			<Value value="57"/>
+			<Value value="58"/>
+			<Value value="59"/>
+			<Value value="60"/>
+			<Value value="61"/>
+			<Value value="62"/>
+			<Value value="63"/>
+			<Value value="65"/>
+			<Value value="66"/>
+			<Value value="67"/>
+			<Value value="69"/>
+			<Value value="70"/>
+			<Value value="71"/>
+			<Value value="72"/>
+			<Value value="73"/>
+			<Value value="74"/>
+			<Value value="77"/>
+			<Value value="78"/>
+			<Value value="79"/>
+			<Value value="80"/>
+			<Value value="82"/>
+			<Value value="84"/>
+			<Value value="86"/>
+			<Value value="87"/>
+			<Value value="88"/>
+			<Value value="89"/>
+			<Value value="90"/>
+			<Value value="92"/>
+			<Value value="94"/>
+			<Value value="97"/>
+			<Value value="98"/>
+			<Value value="99"/>
+			<Value value="100"/>
+			<Value value="101"/>
+			<Value value="102"/>
+			<Value value="104"/>
+			<Value value="105"/>
+			<Value value="106"/>
+			<Value value="107"/>
+			<Value value="108"/>
+			<Value value="110"/>
+			<Value value="111"/>
+			<Value value="112"/>
+			<Value value="113"/>
+			<Value value="114"/>
+			<Value value="116"/>
+			<Value value="117"/>
+			<Value value="118"/>
+			<Value value="119"/>
+			<Value value="120"/>
+			<Value value="121"/>
+			<Value value="122"/>
+			<Value value="123"/>
+			<Value value="124"/>
+			<Value value="126"/>
+			<Value value="127"/>
+			<Value value="128"/>
+			<Value value="129"/>
+			<Value value="131"/>
+			<Value value="132"/>
+			<Value value="133"/>
+			<Value value="137"/>
+			<Value value="138"/>
+			<Value value="139"/>
+			<Value value="140"/>
+			<Value value="141"/>
+			<Value value="142"/>
+			<Value value="143"/>
+			<Value value="144"/>
+			<Value value="145"/>
+			<Value value="146"/>
+			<Value value="147"/>
+			<Value value="148"/>
+			<Value value="149"/>
+			<Value value="150"/>
+			<Value value="151"/>
+			<Value value="152"/>
+			<Value value="153"/>
+			<Value value="154"/>
+			<Value value="155"/>
+			<Value value="156"/>
+			<Value value="157"/>
+			<Value value="158"/>
+			<Value value="160"/>
+			<Value value="161"/>
+			<Value value="163"/>
+			<Value value="164"/>
+			<Value value="165"/>
+			<Value value="167"/>
+			<Value value="169"/>
+			<Value value="170"/>
+			<Value value="171"/>
+			<Value value="172"/>
+			<Value value="173"/>
+			<Value value="177"/>
+			<Value value="178"/>
+			<Value value="179"/>
+			<Value value="180"/>
+			<Value value="181"/>
+			<Value value="182"/>
+			<Value value="183"/>
+			<Value value="184"/>
+			<Value value="185"/>
+			<Value value="186"/>
+		</DataField>
+		<DataField name="EMBARKED" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="1"/>
+			<Value value="2"/>
+			<Value value="3"/>
+		</DataField>
+	</DataDictionary>
+	<TransformationDictionary>
+		<DerivedField name="float(PCLASS)" optype="continuous" dataType="float">
+			<FieldRef field="PCLASS"/>
+		</DerivedField>
+		<DerivedField name="float(AGE)" optype="continuous" dataType="float">
+			<FieldRef field="AGE"/>
+		</DerivedField>
+		<DerivedField name="float(SIBSP)" optype="continuous" dataType="float">
+			<FieldRef field="SIBSP"/>
+		</DerivedField>
+		<DerivedField name="float(PARCH)" optype="continuous" dataType="float">
+			<FieldRef field="PARCH"/>
+		</DerivedField>
+		<DerivedField name="float(FARE)" optype="continuous" dataType="float">
+			<FieldRef field="FARE"/>
+		</DerivedField>
+	</TransformationDictionary>
+	<MiningModel functionName="classification" algorithmName="XGBoost" x-mathContext="float">
+		<MiningSchema>
+			<MiningField name="SURVIVED" usageType="target"/>
+			<MiningField name="TICKET" missingValueTreatment="asIs" invalidValueTreatment="asIs"/>
+			<MiningField name="CABIN" missingValueTreatment="asIs" invalidValueTreatment="asIs"/>
+			<MiningField name="PARCH"/>
+			<MiningField name="SEX" missingValueTreatment="asIs" invalidValueTreatment="asIs"/>
+			<MiningField name="SIBSP"/>
+			<MiningField name="PCLASS"/>
+			<MiningField name="FARE"/>
+			<MiningField name="EMBARKED" missingValueTreatment="asIs" invalidValueTreatment="asIs"/>
+			<MiningField name="AGE"/>
+		</MiningSchema>
+		<ModelStats>
+			<UnivariateStats field="SEX">
+				<Counts totalFreq="891.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<DiscrStats>
+					<Array type="string">0 1</Array>
+					<Array type="int">314 577</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="TICKET">
+				<Counts totalFreq="891.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<DiscrStats>
+					<Array type="string">0 1 2 5 6 8 9 10 11 12 13 14 15 17 18 19 20 21 24 26 28 30 31 33 34 35 36 37 38 39 40 41 42 43 44 45 46 49 50 51 52 53 54 55 58 59 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 78 79 81 82 84 85 86 87 89 90 92 93 95 96 97 100 101 102 103 104 105 106 107 108 109 110 111 112 113 115 118 120 121 122 123 124 125 126 127 128 130 133 134 135 136 138 139 140 141 142 143 144 145 146 147 148 149 150 152 154 155 156 157 158 160 161 162 167 168 169 171 174 175 176 178 179 180 181 182 186 187 189 190 191 192 193 194 196 198 199 201 203 204 205 207 208 209 211 212 215 216 217 218 219 220 221 223 224 225 226 228 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 247 253 255 256 257 258 259 260 261 262 263 265 266 267 269 272 273 275 278 280 281 282 284 285 286 288 289 290 292 294 295 296 297 298 302 303 304 305 307 308 310 311 312 313 314 316 317 318 319 320 321 323 324 325 326 327 328 330 331 332 333 334 335 336 338 339 340 341 342 343 344 345 346 348 350 352 353 354 357 358 360 361 362 363 365 368 369 370 373 374 377 379 381 382 383 384 385 390 391 392 395 397 398 399 401 402 403 407 408 409 411 412 413 416 417 418 419 420 422 423 425 426 428 429 430 431 432 433 434 436 437 438 439 440 441 444 445 446 448 450 451 453 454 455 457 458 459 460 461 463 464 465 468 469 471 473 475 477 478 479 481 482 484 486 487 488 489 490 491 492 493 495 496 497 498 499 500 501 502 504 505 506 507 508 510 511 514 516 517 519 520 522 523 524 525 526 527 528 529 530 531 532 534 535 536 537 539 540 541 542 544 545 546 547 549 550 551 552 553 555 556 557 558 559 562 564 566 567 572 573 574 575 576 577 580 581 583 584 585 587 588 589 590 591 592 593 594 595 596 597 598 602 603 606 608 610 611 612 613 614 615 616 620 621 622 624 626 627 628 629 630 632 633 635 636 637 638 639 641 642 643 644 646 647 648 649 650 651 652 654 655 656 658 659 661 664 665 666 667 669 670 671 672 673 674 675 676 677 678 679 680 681 683 684 686 688 690 691 693 694 695 697 698 699 701 702 704 706 707 709 710 713 714 716 717 718 720 721 722 723 725 726 727 728 729 730 731 732 733 734 735 736 737 738 742 743 744 745 746 748 749 750 751 752 753 754 755 756 758 761 762 763 764 766 768 769 772 773 774 775 777 778 779 781 782 783 786 787 789 790 791 792 793 794 795 796 797 798 800 802 803 805 806 807 809 810 812 813 814 816 817 818 819 820 821 824 825 826 827 828 830 831 832 833 834 835 836 837 838 839 840 841 844 845 847 848 849 850 852 855 856 857 858 859 860 863 866 868 869 870 871 874 875 876 879 880 881 884 885 886 888 889 890 891 892 894 895 896 898 899 900 901 902 903 904 905 906 908 909 910 912 913 914 915 916 918 919 921 923 924 925 926 927 928</Array>
+					<Array type="int">3 3 2 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 2 4 1 1 2 4 1 1 1 1 1 2 1 1 1 2 1 2 1 2 1 2 2 1 1 1 1 2 1 1 1 1 2 1 1 2 1 1 1 3 2 1 1 1 1 1 1 1 7 2 1 4 2 1 1 1 1 2 1 2 2 2 1 4 1 1 1 2 1 1 1 1 1 1 2 1 1 1 1 1 1 3 2 2 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 3 1 1 1 2 1 3 2 1 2 1 1 1 1 1 2 1 1 1 1 3 1 1 2 1 1 1 2 1 2 1 2 1 1 1 2 1 1 1 1 1 2 1 1 1 2 1 1 1 1 1 2 2 2 2 1 1 1 2 4 1 2 1 1 1 1 1 1 2 1 1 1 1 1 1 1 2 1 1 1 1 2 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 2 1 1 1 3 1 1 2 1 1 1 1 1 1 2 1 6 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 3 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 4 1 2 1 7 1 1 1 6 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 2 1 1 2 1 1 3 1 1 1 1 1 1 1 1 2 1 1 2 1 1 1 1 1 2 1 1 2 1 1 1 1 1 1 1 1 2 2 1 1 2 2 2 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 2 1 1 1 5 1 1 1 1 1 2 1 4 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 2 1 1 2 1 1 1 1 3 1 2 1 1 3 2 1 1 1 6 1 7 1 1 3 1 1 4 2 1 1 1 1 1 2 1 1 2 2 2 3 3 1 1 1 2 1 1 1 1 1 1 1 2 1 2 1 1 2 1 1 3 1 4 2 1 3 2 1 2 1 2 2 1 5 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 2 4 1 1 1 2</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="CABIN">
+				<Counts totalFreq="891.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<DiscrStats>
+					<Array type="string">0 2 3 5 6 8 9 10 12 13 14 15 16 17 18 21 22 24 25 26 27 30 31 32 33 35 36 37 38 39 40 42 43 44 45 47 48 50 51 52 53 54 55 56 57 58 59 60 61 62 63 65 66 67 69 70 71 72 73 74 77 78 79 80 82 84 86 87 88 89 90 92 94 97 98 99 100 101 102 104 105 106 107 108 110 111 112 113 114 116 117 118 119 120 121 122 123 124 126 127 128 129 131 132 133 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 160 161 163 164 165 167 169 170 171 172 173 177 178 179 180 181 182 183 184 185 186</Array>
+					<Array type="int">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 2 2 2 1 1 2 1 1 1 1 1 1 2 2 1 2 2 2 1 1 1 2 1 1 1 1 1 1 4 1 1 1 1 1 1 1 2 2 2 2 1 1 2 3 4 1 1 1 1 1 1 1 2 1 1 2 2 1 1 2 1 2 1 1 1 1 1 2 2 1 1 3 1 1 1 2 1 2 1 2 1 1 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 3 1 2 1 2 2 1 2 1 1 1 1 2 1 1 1 1 1 2 1 1 2 1 1 2 3 3 1 2 4 1 687</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="EMBARKED">
+				<Counts totalFreq="891.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<DiscrStats>
+					<Array type="string">0 1 2 3</Array>
+					<Array type="int">168 77 644 2</Array>
+				</DiscrStats>
+			</UnivariateStats>
+		</ModelStats>
+		<Segmentation multipleModelMethod="modelChain">
+			<Segment id="1">
+				<True/>
+				<MiningModel functionName="regression" x-mathContext="float">
+					<MiningSchema>
+						<MiningField name="TICKET"/>
+						<MiningField name="CABIN"/>
+						<MiningField name="PARCH"/>
+						<MiningField name="SEX"/>
+						<MiningField name="SIBSP"/>
+						<MiningField name="PCLASS"/>
+						<MiningField name="FARE"/>
+						<MiningField name="EMBARKED"/>
+						<MiningField name="AGE"/>
+					</MiningSchema>
+					<Output>
+						<OutputField name="xgbValue" optype="continuous" dataType="float" feature="predictedValue" isFinalResult="false"/>
+					</Output>
+					<Segmentation multipleModelMethod="sum">
+						<Segment id="1">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.048543688">
+									<True/>
+									<Node score="0.17471264">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.034710746">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.13548388">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="23.35"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.15043478">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="0.044444446">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="3.5"/>
+										</Node>
+									</Node>
+									<Node score="0.13333334">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="17.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="2">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.07010203">
+									<True/>
+									<Node score="0.15886477">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.031363882">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.12419658">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="23.35"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.13857155">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="0.0039421306">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										</Node>
+									</Node>
+									<Node score="0.03479553">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="36.25"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="3">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.04090323">
+									<True/>
+									<Node score="0.14632498">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.028353943">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.114657596">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="23.35"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.12682214">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="0.0036003336">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										</Node>
+									</Node>
+									<Node score="0.12272655">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="17.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="4">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="CABIN"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+								</MiningSchema>
+								<Node score="-0.03704911">
+									<True/>
+									<Node score="0.13781516">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.06628291">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.0447166">
+												<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+											</Node>
+										</Node>
+										<Node score="0.041792728">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="4.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.11518067">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="0.04042316">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="3.5"/>
+										</Node>
+									</Node>
+									<Node score="0.115686916">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="17.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="5">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="TICKET"/>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0660529">
+									<True/>
+									<Node score="0.12917395">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.025046036">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.10393455">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="23.35"/>
+											</Node>
+										</Node>
+										<Node score="0.0397609">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="4.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.105511725">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="0.09148311">
+											<SimplePredicate field="TICKET" operator="equal" value="104"/>
+										</Node>
+									</Node>
+									<Node score="0.024277741">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="43.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="6">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.10785345">
+									<True/>
+									<Node score="0.12177368">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.058549758">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.039791625">
+												<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+											</Node>
+										</Node>
+										<Node score="0.03784255">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="4.5"/>
+										</Node>
+									</Node>
+									<Node score="0.15515743">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="13.0"/>
+										<Node score="-0.12179472">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.032383915">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.26875"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="7">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.10077949">
+									<True/>
+									<Node score="0.088411085">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.022191156">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.09494662">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="23.35"/>
+											</Node>
+										</Node>
+										<Node score="0.12673038">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="0.14297287">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="13.0"/>
+										<Node score="-0.11390599">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.029406324">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.26875"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="8">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="TICKET"/>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.054195274">
+									<True/>
+									<Node score="0.08314669">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.020077927">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.088938236">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="23.35"/>
+											</Node>
+										</Node>
+										<Node score="0.12109792">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="-0.08621202">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="0.08921855">
+											<SimplePredicate field="TICKET" operator="equal" value="104"/>
+										</Node>
+									</Node>
+									<Node score="0.026667526">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="43.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="9">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.08937711">
+									<True/>
+									<Node score="0.10478391">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.050502207">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.03496131">
+												<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+											</Node>
+										</Node>
+										<Node score="0.025827063">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="4.5"/>
+										</Node>
+									</Node>
+									<Node score="0.13726321">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="13.0"/>
+										<Node score="-0.10204883">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.023753323">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.26875"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="10">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.08392806">
+									<True/>
+									<Node score="0.072306186">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.052643698">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.030205796">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.0396"/>
+											</Node>
+										</Node>
+										<Node score="0.11225867">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="0.12803473">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="13.0"/>
+										<Node score="-0.09643891">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.021558963">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.26875"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="11">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="TICKET"/>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.04510759">
+									<True/>
+									<Node score="0.06807765">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.01744417">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.08001923">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="23.35"/>
+											</Node>
+										</Node>
+										<Node score="0.108188026">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="-0.07154153">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="0.08591928">
+											<SimplePredicate field="TICKET" operator="equal" value="104"/>
+										</Node>
+									</Node>
+									<Node score="0.027896097">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="43.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="12">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.074807525">
+									<True/>
+									<Node score="0.064075">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.04492799">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.031032626">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="5.5"/>
+											</Node>
+										</Node>
+										<Node score="0.10445382">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="0.12344333">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="13.0"/>
+										<Node score="-0.087708876">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.017381852">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.26875"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="13">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.011201543">
+									<True/>
+									<Node score="0.06027452">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.01474449">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.08234783">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="24.80835"/>
+											</Node>
+										</Node>
+										<Node score="0.100986145">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="0.12616348">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										<Node score="-0.0796117">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.06809735">
+										<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="14">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.10410672">
+									<True/>
+									<Node score="0.056658447">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.04543116">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.026424855">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.0396"/>
+											</Node>
+										</Node>
+										<Node score="0.09772955">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="0.0071149007">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										<Node score="-0.043646704">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="-0.04655318">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="32.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="15">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0620176">
+									<True/>
+									<Node score="0.053213395">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.041225266">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.028300041">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="5.5"/>
+											</Node>
+										</Node>
+										<Node score="0.09463968">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="0.12172424">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										<Node score="-0.07355943">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.012977687">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.26875"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="16">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="TICKET"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.09767962">
+									<True/>
+									<Node score="0.049929377">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.010691927">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.0996414">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="38.5"/>
+											</Node>
+										</Node>
+										<Node score="0.091681056">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="-0.027078142">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										<Node score="0.09015164">
+											<SimplePredicate field="TICKET" operator="equal" value="104"/>
+										</Node>
+									</Node>
+									<Node score="-0.038967762">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="32.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="17">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0060260775">
+									<True/>
+									<Node score="0.0773095">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.038803224">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.026892943">
+												<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+											</Node>
+										</Node>
+										<Node score="0.01435174">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="149.0354"/>
+										</Node>
+									</Node>
+									<Node score="0.10999949">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="13.0"/>
+										<Node score="-0.072976485">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.054226886">
+										<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="18">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.09220176">
+									<True/>
+									<Node score="0.04184365">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.012615906">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.07436692">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="24.80835"/>
+											</Node>
+										</Node>
+										<Node score="0.086802036">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="0.09006743">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										<Node score="-0.023046909">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9875"/>
+										</Node>
+									</Node>
+									<Node score="-0.032219652">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="32.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="19">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="TICKET"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.04273671">
+									<True/>
+									<Node score="0.039100397">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.009419385">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.092459135">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="38.5"/>
+											</Node>
+										</Node>
+										<Node score="0.08407191">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="-0.006818216">
+										<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+										<Node score="0.056915373">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="26.5"/>
+										</Node>
+									</Node>
+									<Node score="0.089173086">
+										<SimplePredicate field="TICKET" operator="equal" value="104"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="20">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.087448105">
+									<True/>
+									<Node score="0.06844049">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.03848301">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.022802545">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.0396"/>
+											</Node>
+										</Node>
+										<Node score="0.0028384065">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="149.0354"/>
+										</Node>
+									</Node>
+									<Node score="-0.008152071">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										<Node score="-0.08812834">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.027463892">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="32.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="21">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.0013805268">
+									<True/>
+									<Node score="0.031824328">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="-0.01227404">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="0.077452295">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+											</Node>
+										</Node>
+										<Node score="0.07962761">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="0.11514231">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										<Node score="-0.05812574">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.043952566">
+										<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="22">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.037915047">
+									<True/>
+									<Node score="0.029602632">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.011203633">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.068567485">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="24.80835"/>
+											</Node>
+										</Node>
+										<Node score="0.07700902">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="0.11022146">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										<Node score="-0.05543947">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="0.0132659795">
+										<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="23">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="TICKET"/>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.008394296">
+									<True/>
+									<Node score="0.06030906">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.03410948">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.02350757">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="5.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.0074683144">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="149.0354"/>
+										</Node>
+									</Node>
+									<Node score="0.089237265">
+										<SimplePredicate field="TICKET" operator="equal" value="104"/>
+									</Node>
+									<Node score="-0.035845198">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="24">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="TICKET"/>
+									<MiningField name="CABIN"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.048630826">
+									<True/>
+									<Node score="-0.0032522478">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+										<Node score="-0.07690143">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="0.01941692">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="30.2"/>
+											</Node>
+										</Node>
+										<Node score="0.123745166">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="-0.024422375">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="0.08259091">
+											<SimplePredicate field="TICKET" operator="equal" value="104"/>
+										</Node>
+									</Node>
+									<Node score="-0.030748043">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="43.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="25">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.044264395">
+									<True/>
+									<Node score="-0.09518154">
+										<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+										<Node score="0.03436715">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="53.5"/>
+											<Node score="-0.017601911">
+												<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.026115794">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.08125"/>
+										</Node>
+									</Node>
+									<Node score="-0.1072495">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="29.5"/>
+										<Node score="0.045423705">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="30.2854"/>
+										</Node>
+									</Node>
+									<Node score="-0.050418317">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="124.45415"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="26">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0791909">
+									<True/>
+									<Node score="0.057080865">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.036591187">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.019549672">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.0396"/>
+											</Node>
+										</Node>
+										<Node score="-0.009704705">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="149.0354"/>
+										</Node>
+									</Node>
+									<Node score="0.10284882">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										<Node score="-0.011877956">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9875"/>
+										</Node>
+									</Node>
+									<Node score="-0.014186168">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="32.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="27">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+								</MiningSchema>
+								<Node score="0.03126059">
+									<True/>
+									<Node score="-0.0023050348">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+										<Node score="0.026272759">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.07088976">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="2.5"/>
+											</Node>
+										</Node>
+										<Node score="0.11863428">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="-0.038344722">
+										<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+										<Node score="-0.001211156">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="26.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.019251812">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="29.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="28">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.021809788">
+									<True/>
+									<Node score="-0.10302768">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.04490776">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="16.5"/>
+										</Node>
+										<Node score="-0.03088825">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+										</Node>
+									</Node>
+									<Node score="0.0043657455">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										<Node score="0.11565288">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="0.012570008">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.1729"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="29">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="TICKET"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.023050306">
+									<True/>
+									<Node score="0.020629926">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.009896443">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.07961442">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="38.5"/>
+											</Node>
+										</Node>
+										<Node score="0.06957377">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="28.85625"/>
+										</Node>
+									</Node>
+									<Node score="0.07971782">
+										<SimplePredicate field="TICKET" operator="equal" value="104"/>
+									</Node>
+									<Node score="0.041104287">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="13.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="30">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.018845944">
+									<True/>
+									<Node score="-0.10236062">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.021575755">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+										</Node>
+										<Node score="-0.035457365">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.33125"/>
+										</Node>
+									</Node>
+									<Node score="0.0020887458">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										<Node score="0.11033171">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="0.011706929">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.1729"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="31">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+								</MiningSchema>
+								<Node score="0.0041635986">
+									<True/>
+									<Node score="-0.096409485">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.020358553">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+										</Node>
+										<Node score="-0.026326481">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+										</Node>
+									</Node>
+									<Node score="0.0019656753">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										<Node score="0.106331065">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="-0.02920871">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="36.25"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="32">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.038444784">
+									<True/>
+									<Node score="-0.0562602">
+										<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+										<Node score="0.05357055">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="36.25"/>
+											<Node score="-0.015610779">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="30.75"/>
+											</Node>
+										</Node>
+										<Node score="-1.5573928E-4">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.125"/>
+										</Node>
+									</Node>
+									<Node score="-0.099426575">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="29.5"/>
+										<Node score="0.04361291">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="30.2854"/>
+										</Node>
+									</Node>
+									<Node score="-0.05117909">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="124.45415"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="33">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.065689005">
+									<True/>
+									<Node score="-0.09307254">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.019333312">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+										</Node>
+										<Node score="-0.024279144">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+										</Node>
+									</Node>
+									<Node score="0.0027692185">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										<Node score="0.102651194">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="-4.5771833E-4">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.13335"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="34">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.02234494">
+									<True/>
+									<Node score="0.059950035">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.0348758">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.018229432">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.0396"/>
+											</Node>
+										</Node>
+										<Node score="0.009859656">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="27.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.008714264">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="53.0"/>
+										<Node score="-0.07171839">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="13.75"/>
+										</Node>
+									</Node>
+									<Node score="-0.019563638">
+										<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="35">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0891308">
+									<True/>
+									<Node score="-2.9404022E-4">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.13335"/>
+										<Node score="-0.070706256">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="0.017825024">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+											</Node>
+										</Node>
+										<Node score="0.07695251">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.06011316">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="24.5"/>
+										<Node score="0.035989206">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="35.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="36">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="TICKET"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="1.4362056E-4">
+									<True/>
+									<Node score="-0.04368936">
+										<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+										<Node score="0.07362672">
+											<SimplePredicate field="TICKET" operator="equal" value="104"/>
+										</Node>
+										<Node score="-0.00520336">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="53.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.10421433">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="49.5"/>
+										<Node score="0.008744506">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="35.077103"/>
+										</Node>
+									</Node>
+									<Node score="0.045018952">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.1479"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="37">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="TICKET"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.017797295">
+									<True/>
+									<Node score="0.048768938">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.032317042">
+											<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.016749242">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.0396"/>
+											</Node>
+										</Node>
+										<Node score="-0.01785026">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="149.0354"/>
+										</Node>
+									</Node>
+									<Node score="0.068557404">
+										<SimplePredicate field="TICKET" operator="equal" value="104"/>
+									</Node>
+									<Node score="0.040156074">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="13.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="38">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.08150398">
+									<True/>
+									<Node score="2.416179E-4">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.13335"/>
+										<Node score="-0.0671369">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="0.017327046">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+											</Node>
+										</Node>
+										<Node score="0.07268282">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.0055947364">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="28.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="39">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="9.49483E-4">
+									<True/>
+									<Node score="-0.025921075">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="36.25"/>
+										<Node score="-0.033895727">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="29.85"/>
+											<Node score="0.0429326">
+												<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="0.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.08455235">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="41.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.050376613">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="30.75"/>
+										<Node score="0.06012345">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										</Node>
+									</Node>
+									<Node score="-0.095953815">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="134.64165"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="40">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.08555322">
+									<True/>
+									<Node score="0.03295129">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.13335"/>
+										<Node score="0.01749645">
+											<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+											<Node score="-0.014474149">
+												<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.017200328">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="29.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.007299864">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="24.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="41">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.018522346">
+									<True/>
+									<Node score="-0.0891143">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.017542476">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+										</Node>
+										<Node score="-0.0137710245">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.33125"/>
+										</Node>
+									</Node>
+									<Node score="-0.005196633">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										<Node score="0.09467249">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="-0.009718169">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="42">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.021349503">
+									<True/>
+									<Node score="0.015084274">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.06468817">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.3729"/>
+											<Node score="-2.440067E-4">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="32.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.112114966">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="14.12915"/>
+										</Node>
+									</Node>
+									<Node score="-0.0071307877">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="53.0"/>
+										<Node score="-0.063011505">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="20.0"/>
+										</Node>
+									</Node>
+									<Node score="0.010448645">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="24.75"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="43">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.001691824">
+									<True/>
+									<Node score="-0.030414075">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="36.25"/>
+										<Node score="-0.031742666">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="29.85"/>
+											<Node score="0.036764912">
+												<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="0.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.107241444">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="38.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.016192686">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="30.75"/>
+										<Node score="0.06407016">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="12.9375"/>
+										</Node>
+									</Node>
+									<Node score="-0.09062662">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="134.64165"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="44">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="PARCH"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0063079456">
+									<True/>
+									<Node score="-0.04075643">
+										<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+										<Node score="0.00449234">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="49.5"/>
+											<Node score="0.051847566">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.49375"/>
+											</Node>
+										</Node>
+										<Node score="0.053466268">
+											<SimplePredicate field="float(PARCH)" operator="greaterOrEqual" value="0.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.08423294">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="59.0875"/>
+										<Node score="-9.453214E-4">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="79.825"/>
+										</Node>
+									</Node>
+									<Node score="0.06275669">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="52.2771"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="45">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.053959068">
+									<True/>
+									<Node score="0.0819328">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="6.5"/>
+										<Node score="-0.07350776">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="2.5"/>
+											<Node score="0.053062916">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="1.5"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.0033420199">
+										<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+										<Node score="-0.042990115">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="23.35"/>
+										</Node>
+									</Node>
+									<Node score="-0.0040015215">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="30.5979"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="46">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.0020946164">
+									<True/>
+									<Node score="-0.02814116">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="36.25"/>
+										<Node score="-0.029657057">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="29.85"/>
+											<Node score="0.033849653">
+												<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="0.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.10423638">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="38.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.046944436">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="30.75"/>
+										<Node score="0.0494025">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										</Node>
+									</Node>
+									<Node score="-0.084072165">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="134.64165"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="47">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.08267244">
+									<True/>
+									<Node score="-0.0010812012">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.13335"/>
+										<Node score="-0.059880998">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="0.0187571">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+											</Node>
+										</Node>
+										<Node score="0.045815296">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="16.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.0044143307">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="24.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="48">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0032790967">
+									<True/>
+									<Node score="0.014440929">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.061376452">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.3729"/>
+											<Node score="-4.200396E-4">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="32.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.1032119">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="14.12915"/>
+										</Node>
+									</Node>
+									<Node score="0.08728101">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										<Node score="-0.02942933">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.041201998">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="24.75"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="49">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.07047768">
+									<True/>
+									<Node score="-0.026075168">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="36.25"/>
+										<Node score="0.0692331">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="29.85"/>
+											<Node score="-0.011415458">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.85415"/>
+											</Node>
+										</Node>
+										<Node score="-0.104661405">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="27.8104"/>
+										</Node>
+									</Node>
+									<Node score="-0.0059577147">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="0.053442992">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.0070203072">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="39.7625"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="50">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="TICKET"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.009549844">
+									<True/>
+									<Node score="-0.0016485055">
+										<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+										<Node score="-0.06475121">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="49.5"/>
+											<Node score="0.013873982">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="68.6146"/>
+											</Node>
+										</Node>
+										<Node score="0.04321965">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.1479"/>
+										</Node>
+									</Node>
+									<Node score="-0.04192837">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.85415"/>
+										<Node score="0.06174763">
+											<SimplePredicate field="TICKET" operator="equal" value="104"/>
+										</Node>
+									</Node>
+									<Node score="0.06612608">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.266651"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="51">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.07557425">
+									<True/>
+									<Node score="-3.9721318E-4">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.13335"/>
+										<Node score="-0.058391422">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="0.019538919">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+											</Node>
+										</Node>
+										<Node score="0.041493345">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="16.5"/>
+										</Node>
+									</Node>
+									<Node score="0.0055081407">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="28.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="52">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0666145">
+									<True/>
+									<Node score="-0.025061643">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="42.5"/>
+										<Node score="0.03434677">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="47.5"/>
+											<Node score="-0.088334434">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="13.9771"/>
+											</Node>
+										</Node>
+										<Node score="0.08070138">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="49.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.0074521764">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="0.04933523">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+										</Node>
+									</Node>
+									<Node score="0.044322398">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="10.48125"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="53">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="TICKET"/>
+									<MiningField name="AGE"/>
+									<MiningField name="PARCH"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-2.9820585E-4">
+									<True/>
+									<Node score="0.013883886">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.085577525">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.33125"/>
+											<Node score="-0.021843476">
+												<SimplePredicate field="float(PARCH)" operator="greaterOrEqual" value="1.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.059279144">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="36.5"/>
+										</Node>
+									</Node>
+									<Node score="0.05824092">
+										<SimplePredicate field="TICKET" operator="equal" value="104"/>
+									</Node>
+									<Node score="-0.040517103">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="36.877098"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="54">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.014021511">
+									<True/>
+									<Node score="-0.08532616">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.018638847">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+										</Node>
+										<Node score="-0.0013141632">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.33125"/>
+										</Node>
+									</Node>
+									<Node score="-0.01479315">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										<Node score="0.083954245">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="-0.006525799">
+										<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="55">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="TICKET"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.079006575">
+									<True/>
+									<Node score="-0.012022715">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.13335"/>
+										<Node score="-0.0020325067">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.2396"/>
+											<Node score="0.054927457">
+												<SimplePredicate field="TICKET" operator="equal" value="104"/>
+											</Node>
+										</Node>
+										<Node score="0.10898985">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="24.5"/>
+										</Node>
+									</Node>
+									<Node score="0.0018768627">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="24.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="56">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.017513912">
+									<True/>
+									<Node score="0.013710551">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.059307884">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.3729"/>
+											<Node score="-0.0042929477">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="32.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.09489095">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="14.12915"/>
+										</Node>
+									</Node>
+									<Node score="-0.05794063">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="53.0"/>
+										<Node score="-0.0064614466">
+											<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+										</Node>
+									</Node>
+									<Node score="0.009765162">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="24.75"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="57">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.0348009">
+									<True/>
+									<Node score="-0.030768586">
+										<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+										<Node score="-0.032560375">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="0.5"/>
+											<Node score="0.026717141">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+											</Node>
+										</Node>
+										<Node score="0.014983852">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										</Node>
+									</Node>
+									<Node score="-0.09431504">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="29.5"/>
+										<Node score="0.031497803">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="30.2854"/>
+										</Node>
+									</Node>
+									<Node score="-0.032797005">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="77.9646"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="58">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.005336105">
+									<True/>
+									<Node score="0.02814434">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="6.9624996"/>
+										<Node score="-0.017778454">
+											<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+											<Node score="0.008137255">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="26.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.021091824">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="29.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.07190089">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="2.00625"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="59">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.0019400278">
+									<True/>
+									<Node score="-0.07641682">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="36.25"/>
+										<Node score="0.08063758">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+											<Node score="-0.015886275">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.2271"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.040783573">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="30.75"/>
+										<Node score="0.042321827">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										</Node>
+									</Node>
+									<Node score="-0.080228224">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="134.64165"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="60">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.011741095">
+									<True/>
+									<Node score="-0.073703565">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.023319636">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="-0.040061627">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="35.5375"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.017391976">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="16.5"/>
+										<Node score="0.05264584">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										</Node>
+									</Node>
+									<Node score="0.008366762">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.1729"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="61">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="TICKET"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.001465902">
+									<True/>
+									<Node score="0.049804885">
+										<SimplePredicate field="TICKET" operator="equal" value="104"/>
+									</Node>
+									<Node score="-0.05848046">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.85415"/>
+										<Node score="0.003069806">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="52.2771"/>
+										</Node>
+									</Node>
+									<Node score="0.07456383">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="29.85"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="62">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.0128065245">
+									<True/>
+									<Node score="-0.08274241">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.022120174">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+										</Node>
+										<Node score="0.0035398745">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.33125"/>
+										</Node>
+									</Node>
+									<Node score="-0.015485153">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										<Node score="0.08011983">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="-0.005953697">
+										<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="63">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.036556344">
+									<True/>
+									<Node score="0.004673036">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="-0.056304973">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="3.5"/>
+										</Node>
+										<Node score="0.056602944">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.33125"/>
+										</Node>
+									</Node>
+									<Node score="-0.090707734">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="36.877098"/>
+										<Node score="-0.0025877866">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="52.2771"/>
+										</Node>
+									</Node>
+									<Node score="-0.008994571">
+										<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="64">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.0024472636">
+									<True/>
+									<Node score="-0.07390415">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="36.25"/>
+										<Node score="0.076153316">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+											<Node score="-0.01606406">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.2271"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.03810097">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="30.75"/>
+										<Node score="0.03873229">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										</Node>
+									</Node>
+									<Node score="-0.07739582">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="134.64165"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="65">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.047624644">
+									<True/>
+									<Node score="0.0022995705">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="6.9624996"/>
+										<Node score="0.014169658">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.0396"/>
+											<Node score="-0.01247701">
+												<SimplePredicate field="CABIN" operator="equal" value="186"/>
+											</Node>
+										</Node>
+										<Node score="0.08683338">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.9104004"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="66">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.061194606">
+									<True/>
+									<Node score="-0.021561427">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="42.5"/>
+										<Node score="0.033942085">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="47.5"/>
+											<Node score="-0.08208702">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="13.9771"/>
+											</Node>
+										</Node>
+										<Node score="0.07755976">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="49.5"/>
+										</Node>
+									</Node>
+									<Node score="0.0222994">
+										<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										<Node score="-0.011690466">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.88335"/>
+										</Node>
+									</Node>
+									<Node score="0.03717198">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="10.48125"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="67">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="TICKET"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-6.460523E-4">
+									<True/>
+									<Node score="0.04800759">
+										<SimplePredicate field="TICKET" operator="equal" value="104"/>
+									</Node>
+									<Node score="-0.038088143">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.85415"/>
+										<Node score="0.014675537">
+											<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+										</Node>
+									</Node>
+									<Node score="0.06567069">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="29.85"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="68">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0018343611">
+									<True/>
+									<Node score="0.011500872">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.08605172">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.3729"/>
+											<Node score="0.009466459">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="17.599998"/>
+											</Node>
+										</Node>
+										<Node score="-0.0887535">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="14.12915"/>
+										</Node>
+									</Node>
+									<Node score="0.08184269">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										<Node score="-0.02153659">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.03351022">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="24.75"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="69">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.0058094054">
+									<True/>
+									<Node score="-0.09926382">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="149.0354"/>
+										<Node score="0.031001603">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="28.0"/>
+										</Node>
+										<Node score="-0.020485891">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="23.5"/>
+										</Node>
+									</Node>
+									<Node score="0.07968836">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="116.6375"/>
+									</Node>
+									<Node score="-0.019193696">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="35.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="70">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.045453094">
+									<True/>
+									<Node score="0.025631154">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="6.9624996"/>
+										<Node score="0.005181463">
+											<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+											<Node score="-0.021531193">
+												<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="0.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.022683842">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="29.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="71">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0011151785">
+									<True/>
+									<Node score="-0.045025684">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="63.5"/>
+									</Node>
+									<Node score="0.044226434">
+										<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+										<Node score="0.004161285">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="14.15835"/>
+										</Node>
+									</Node>
+									<Node score="-0.057853173">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="143.59164"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="72">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="TICKET"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.001199351">
+									<True/>
+									<Node score="0.044566017">
+										<SimplePredicate field="TICKET" operator="equal" value="104"/>
+									</Node>
+									<Node score="-0.051118296">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.85415"/>
+										<Node score="0.0030531918">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="52.2771"/>
+										</Node>
+									</Node>
+									<Node score="0.06067366">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="29.85"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="73">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.043483432">
+									<True/>
+									<Node score="-4.825993E-4">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="6.9624996"/>
+										<Node score="-0.06835458">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+											<Node score="0.002451461">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="2.5"/>
+											</Node>
+										</Node>
+										<Node score="0.032660123">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="16.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="74">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.06545028">
+									<True/>
+									<Node score="-0.04290682">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="63.5"/>
+									</Node>
+									<Node score="0.0033621981">
+										<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+										<Node score="-0.030648485">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="32.25"/>
+										</Node>
+									</Node>
+									<Node score="-6.388505E-4">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="27.135399"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="75">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.042316552">
+									<True/>
+									<Node score="-0.0072658025">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="6.9624996"/>
+										<Node score="0.08705678">
+											<SimplePredicate field="SEX" operator="equal" value="0"/>
+											<Node score="0.0052277925">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.5229"/>
+											</Node>
+										</Node>
+										<Node score="0.043685246">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="76">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="TICKET"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="3.6442865E-4">
+									<True/>
+									<Node score="0.042123076">
+										<SimplePredicate field="TICKET" operator="equal" value="104"/>
+									</Node>
+									<Node score="-0.068205416">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="36.877098"/>
+										<Node score="0.003387373">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="52.2771"/>
+										</Node>
+									</Node>
+									<Node score="0.0823341">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="35.25"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="77">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.002071244">
+									<True/>
+									<Node score="-0.09479691">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="135.06665"/>
+										<Node score="0.03432594">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="28.0"/>
+										</Node>
+										<Node score="-0.015578115">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="224.6521"/>
+										</Node>
+									</Node>
+									<Node score="0.06805601">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="112.07915"/>
+									</Node>
+									<Node score="0.04182395">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="78">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="PCLASS"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.011895535">
+									<True/>
+									<Node score="-0.08025678">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.025399914">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+										</Node>
+										<Node score="0.009482629">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.33125"/>
+										</Node>
+									</Node>
+									<Node score="-0.018455934">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										<Node score="0.075415">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="-0.0049499357">
+										<SimplePredicate field="float(PCLASS)" operator="greaterOrEqual" value="1.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="79">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.002008693">
+									<True/>
+									<Node score="-0.09128263">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="149.0354"/>
+										<Node score="0.029305095">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="28.0"/>
+										</Node>
+										<Node score="-0.015672447">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="224.6521"/>
+										</Node>
+									</Node>
+									<Node score="0.074950084">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="116.6375"/>
+									</Node>
+									<Node score="0.038972314">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="80">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="CABIN"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0030596298">
+									<True/>
+									<Node score="-0.07851415">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.024401946">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+										</Node>
+										<Node score="0.007861252">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.33125"/>
+										</Node>
+									</Node>
+									<Node score="-0.017653197">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+										<Node score="0.072434045">
+											<SimplePredicate field="CABIN" operator="equal" value="186"/>
+										</Node>
+									</Node>
+									<Node score="0.015447418">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="52.2771"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="81">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0014569288">
+									<True/>
+									<Node score="-0.084506534">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="135.06665"/>
+										<Node score="0.029289532">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="28.0"/>
+										</Node>
+										<Node score="-0.015849361">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="224.6521"/>
+										</Node>
+									</Node>
+									<Node score="0.061405838">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="112.07915"/>
+									</Node>
+									<Node score="0.03642332">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="82">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+								</MiningSchema>
+								<Node score="0.0016263776">
+									<True/>
+									<Node score="-0.041343413">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="63.5"/>
+									</Node>
+									<Node score="0.045838878">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="59.5"/>
+									</Node>
+									<Node score="-0.048052553">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="53.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="83">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="PARCH"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.004640493">
+									<True/>
+									<Node score="-0.041537594">
+										<SimplePredicate field="float(PARCH)" operator="greaterOrEqual" value="3.5"/>
+									</Node>
+									<Node score="-0.06641942">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.0029883569">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="0.010045956">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.1729"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="84">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.00486933">
+									<True/>
+									<Node score="0.0030008224">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="-0.059996378">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="3.5"/>
+										</Node>
+										<Node score="0.056102224">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.33125"/>
+										</Node>
+									</Node>
+									<Node score="-0.05774734">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="59.0875"/>
+										<Node score="-0.0038501264">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="86.2896"/>
+										</Node>
+									</Node>
+									<Node score="0.057851817">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="52.2771"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="85">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.005463208">
+									<True/>
+									<Node score="-0.08829584">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.775"/>
+										<Node score="0.050791856">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="29.4125"/>
+											<Node score="-0.01187585">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.85415"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.029614965">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.266651"/>
+										<Node score="0.14407414">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="53.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.02860078">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="32.75"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="86">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.0018752061">
+									<True/>
+									<Node score="-0.084645666">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="135.06665"/>
+										<Node score="0.027797056">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="28.0"/>
+										</Node>
+										<Node score="-0.018763077">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="23.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.014214789">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="84.9875"/>
+										<Node score="0.102906525">
+											<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+										</Node>
+									</Node>
+									<Node score="-0.031935405">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="60.2875"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="87">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.039593607">
+									<True/>
+									<Node score="-0.010774592">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="6.9624996"/>
+										<Node score="-0.06695643">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="8.125"/>
+											<Node score="6.597407E-4">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="9.2875"/>
+											</Node>
+										</Node>
+										<Node score="0.03893663">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="27.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="88">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="PARCH"/>
+								</MiningSchema>
+								<Node score="7.2569604E-4">
+									<True/>
+									<Node score="-0.04057106">
+										<SimplePredicate field="float(PARCH)" operator="greaterOrEqual" value="3.5"/>
+									</Node>
+									<Node score="-0.06377129">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.0025618083">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="0.039051104">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="8.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="89">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.002153235">
+									<True/>
+									<Node score="-0.078146555">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="135.06665"/>
+										<Node score="0.026574645">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="28.0"/>
+										</Node>
+										<Node score="-0.013838488">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="224.6521"/>
+										</Node>
+									</Node>
+									<Node score="-0.013325547">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="84.9875"/>
+										<Node score="0.09890007">
+											<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+										</Node>
+									</Node>
+									<Node score="0.035409313">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="5.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="90">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.037750497">
+									<True/>
+									<Node score="0.022916727">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="6.9624996"/>
+										<Node score="-0.017080445">
+											<SimplePredicate field="EMBARKED" operator="equal" value="2"/>
+											<Node score="0.010013844">
+												<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="26.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.02137064">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="29.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="91">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="PARCH"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="0.0017278976">
+									<True/>
+									<Node score="-0.03911394">
+										<SimplePredicate field="float(PARCH)" operator="greaterOrEqual" value="3.5"/>
+									</Node>
+									<Node score="0.04311219">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="254.9479"/>
+									</Node>
+									<Node score="-0.05897866">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="149.0354"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="92">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+								</MiningSchema>
+								<Node score="0.0011881494">
+									<True/>
+									<Node score="-0.03784833">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="63.5"/>
+									</Node>
+									<Node score="0.044121847">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="59.5"/>
+									</Node>
+									<Node score="-0.044926386">
+										<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="53.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="93">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="TICKET"/>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-9.840392E-4">
+									<True/>
+									<Node score="0.035968386">
+										<SimplePredicate field="TICKET" operator="equal" value="104"/>
+									</Node>
+									<Node score="-0.03218782">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.85415"/>
+										<Node score="0.017876873">
+											<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+										</Node>
+									</Node>
+									<Node score="0.05288778">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="29.85"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="94">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-1.7153929E-4">
+									<True/>
+									<Node score="0.0076131867">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.058738958">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.3729"/>
+											<Node score="-0.0068506137">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="32.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.08634407">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="14.12915"/>
+										</Node>
+									</Node>
+									<Node score="0.075831816">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										<Node score="-0.020020043">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.030899439">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="24.75"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="95">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="PARCH"/>
+								</MiningSchema>
+								<Node score="8.67612E-5">
+									<True/>
+									<Node score="-0.03895251">
+										<SimplePredicate field="float(PARCH)" operator="greaterOrEqual" value="3.5"/>
+									</Node>
+									<Node score="-0.043775853">
+										<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										<Node score="0.023829522">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="15.0"/>
+										</Node>
+									</Node>
+									<Node score="0.02384949">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="16.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="96">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AGE"/>
+									<MiningField name="PARCH"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.03603989">
+									<True/>
+									<Node score="-0.03711707">
+										<SimplePredicate field="float(PARCH)" operator="greaterOrEqual" value="3.5"/>
+									</Node>
+									<Node score="-0.0036894463">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="6.9624996"/>
+										<Node score="0.00812249">
+											<SimplePredicate field="float(AGE)" operator="greaterOrEqual" value="26.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="97">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="PARCH"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.098813675">
+									<True/>
+									<Node score="0.04769405">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="35.5"/>
+										<Node score="-0.05619223">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="0.5"/>
+											<Node score="-0.0018037253">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="25.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.005759164">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="25.5"/>
+										</Node>
+									</Node>
+									<Node score="0.007832096">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="7.73125"/>
+										<Node score="-0.06217387">
+											<SimplePredicate field="float(PARCH)" operator="greaterOrEqual" value="1.5"/>
+										</Node>
+									</Node>
+									<Node score="1.5600651E-4">
+										<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="98">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SEX"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="2.9978898E-4">
+									<True/>
+									<Node score="0.006199015">
+										<SimplePredicate field="SEX" operator="equal" value="0"/>
+										<Node score="0.057036687">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="15.3729"/>
+											<Node score="-0.004977292">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="32.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.080031924">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="14.12915"/>
+										</Node>
+									</Node>
+									<Node score="0.07300968">
+										<SimplePredicate field="float(AGE)" operator="lessThan" value="9.5"/>
+										<Node score="-0.016729485">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.024002105">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="30.5979"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="99">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="SIBSP"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0067617632">
+									<True/>
+									<Node score="-0.026814276">
+										<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+										<Node score="0.05382551">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="29.5"/>
+											<Node score="-0.033976316">
+												<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="77.9646"/>
+											</Node>
+										</Node>
+										<Node score="0.043780603">
+											<SimplePredicate field="float(SIBSP)" operator="greaterOrEqual" value="0.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.06831024">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="59.0875"/>
+										<Node score="0.00402598">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="79.825"/>
+										</Node>
+									</Node>
+									<Node score="0.019186435">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.125"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="100">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EMBARKED"/>
+									<MiningField name="AGE"/>
+									<MiningField name="PARCH"/>
+									<MiningField name="FARE"/>
+								</MiningSchema>
+								<Node score="-0.0059401924">
+									<True/>
+									<Node score="-0.040211707">
+										<SimplePredicate field="EMBARKED" operator="equal" value="0"/>
+										<Node score="0.036682364">
+											<SimplePredicate field="float(AGE)" operator="lessThan" value="49.5"/>
+											<Node score="-0.015135941">
+												<SimplePredicate field="float(AGE)" operator="lessThan" value="18.5"/>
+											</Node>
+										</Node>
+										<Node score="0.053873785">
+											<SimplePredicate field="float(PARCH)" operator="greaterOrEqual" value="0.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.04827976">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="31.85415"/>
+										<Node score="-0.0028306437">
+											<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="52.2771"/>
+										</Node>
+									</Node>
+									<Node score="0.047429185">
+										<SimplePredicate field="float(FARE)" operator="greaterOrEqual" value="26.266651"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+					</Segmentation>
+				</MiningModel>
+			</Segment>
+			<Segment id="2">
+				<True/>
+				<RegressionModel functionName="classification" normalizationMethod="logit" x-mathContext="float">
+					<MiningSchema>
+						<MiningField name="SURVIVED" usageType="target"/>
+						<MiningField name="xgbValue"/>
+					</MiningSchema>
+					<Output>
+						<OutputField name="probability(0)" optype="continuous" feature="probability" value="0"/>
+						<OutputField name="probability(1)" optype="continuous" feature="probability" value="1"/>
+					</Output>
+					<RegressionTable intercept="0.0" targetCategory="1">
+						<NumericPredictor name="xgbValue" coefficient="1.0"/>
+					</RegressionTable>
+					<RegressionTable intercept="0.0" targetCategory="0"/>
+				</RegressionModel>
+			</Segment>
+		</Segmentation>
+	</MiningModel>
+</PMML>
