@@ -40,7 +40,7 @@ xgb_predict_python.to_csv(r'python_predict/xgb_predict_python.csv')
 run_pmml_jar('java -jar pmml_predict/runpmml.jar data/X_test.csv model_file/xgb_pmml.pmml pmml_predict/xgb_predict_pmml.csv PASSENGERID')
   ```
 
-将python预测结果和python预测结果按照字符型读取csv，避免读取后python自动使部分变量有精度损失（因为python是按64位读取的，对于一个小数，按照64位读取很容易在精度上有细微差异， 比如0.121451读取成0.1214510000000001，关于python的精度损失可以查看[为什么浮点数不正确？](https://stackoverflow.com/questions/21895756/why-are-floating-point-numbers-inaccurate)），并且字符型也便于小数位的比较。
+将python预测结果和python预测结果按照字符型读取csv，避免读取后python自动使部分变量有精度损失（直接读取容易在精度上有细微差异， 比如0.12141读取成0.12141001，关于python的精度损失可以查看[为什么浮点数不正确？](https://stackoverflow.com/questions/21895756/why-are-floating-point-numbers-inaccurate)），并且字符型也便于小数位的比较。
 
 python预测结果和pmml预测结果对比如下，发现从第5位小数位开始出现差异：
 
