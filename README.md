@@ -134,16 +134,16 @@ __也就是说python和pmml的预测精度差异并不在pmml对xgboost树结构
 
 ### 1.3 sigmoid运算对比
 由于XGBoost使用的是32位浮点，python和pmml的实现分别是：
-* python：python默认的浮点运算为64位，在python中将所有子树叶结点值的和使用numpy.float32数组存储，并使用32位的np.exp实现sigmoid运算可得到与predict_proba完全一致的结果，代码如下：
+* python：python默认的浮点运算为64位，在python中将所有子树叶结点值的和使用numpy.float32数组存储，并使用32位的np.exp实现sigmoid运算可得到与predict_proba完全一致的结果。这里不管是存储还是运算，只要不是32位浮点（比如用numpy.float64位存储或者用np.exp(-x, np.float64)）都会导致结果出现差异，__这验证了XGBoost在c++的底层实现中的确是使用32位浮点，所以想要得到与XGBoost底层运算相同的结果，存储和运算过程都要在32位浮点的基础上进行，否则无法复现__。代码如下：
 ```python
 sigmoid = lambda x: 1 / (1 + np.exp(-x))
 np.float32(sigmoid(np.float32(python_predict['python所有叶节点和']))).astype(str)
 ```
-  这里不管是存储还是运算，只要不是32位浮点（比如用numpy.float64位存储或者用np.exp(-x, np.float64)）都会导致结果出现差异，__这验证了XGBoost在c++的底层实现中的确是使用32位浮点，所以想要得到与XGBoost底层运算相同的结果，存储和运算过程都要在32位浮点的基础上进行，否则无法复现__。
+
 
 * pmml：pmml同样默认64位浮点运算，为了得到32位浮点运算需要将所有子树叶结点值的和使用dataType="float"存储，并通过x-mathContext="float"告诉PMML引擎需要切换到32位浮点模式（[issues 15](https://github.com/jpmml/jpmml-xgboost/issues/15)），sigmoid运算使用的是normalizationMethod="logit"。
 
-而为了知道pmml的sigmoid运算具体是哪一步出了问题，分别进行下面三种修改：
+而为了知道pmml的sigmoid运算具体是哪一步出了问题，分别对pmml文件进行下面三种修改：
 1. OutputField删除dataType="float"，修改为如下：
 ```xml
 <OutputField name="probability(0)" optype="continuous" feature="probability" value="0"/>
@@ -176,9 +176,9 @@ np.float32(sigmoid(np.float32(python_predict['python所有叶节点和']))).asty
 
 
 上面的关系是：
-* pmml修改后预测结果1 限制了 dataType="float" 得到 pmml 预测结果
-* pmml修改后预测结果3 限制了 dataType="float" 得到 pmml 修改后预测结果2
-* pmml修改后预测结果3 限制了 x-mathContext="float" 得到 pmml 修改后预测结果1
+* pmml修改后预测结果1 限制了 dataType="float" 得到 pmml预测结果
+* pmml修改后预测结果3 限制了 dataType="float" 得到 pmml修改后预测结果2
+* pmml修改后预测结果3 限制了 x-mathContext="float" 得到 pmml修改后预测结果1
 
 所以可以看出使用 normalizationMethod="logit" 去做sigmoid运算得到的结果应该是 pmml修改后预测结果1 和 pmml修改后预测结果3，也就是说目前XGBoos的pmml文件预测的结果其实是在做了sigmoid运算得到一个64位浮点数后，再通过 dataType="float" 转换成了32位浮点数。
 
