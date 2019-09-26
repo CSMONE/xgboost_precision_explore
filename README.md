@@ -355,4 +355,4 @@ gateway.shutdown()
 ## 3 总结
 综上，由于XGBoost使用的是32位浮点，而pmml使用的是64位浮点，pmml树结构的各节点score因为只涉及到和运算，可以通过XGBoost的二进制文件精准转换得到，但是sigmoid运算却无法得到准确的32位浮点运算的结果，就算使用了第三方扩展属性 x-mathContext="float" 通知PMML引擎切换到32位浮点模式也无法精确地重现XGBoost预测，目前XGBoost精度差异无法避免，有两点使用建议：
 1. 在python中使用 model.\_final\_estimator.predict(mapper.transform(data), output_margin=True) 得到所有子树叶节点值的统计和后，手动计算64位浮点sigmoid运算 sigmoid = lambda x: 1 / (1 + np.exp(-x, dtype=np.float64)) ，同时在pmml文件中删除RegressionModel中的x-mathContext="float"，且删除OutputField中的dataType="float"，可以保证python和pmml的预测结果相同。
-2. 不进行任何改动，但是使用到预测结果的阈值需要进行分组时，阈值不能过于精准，建议四舍五入至4位小数，否者阈值是0.09169989时，python预测了0.09169989，但是pmml却预测出0.091699906，会使线上线下分组结果不统一
+2. 不进行任何改动，但是使用到预测结果的阈值需要进行分组时，阈值不能过于精准，建议四舍五入至4位小数，否者阈值是0.09169989时，python预测了0.09169989，但是pmml却预测出0.091699906，会使线上线下分组结果不统一。
