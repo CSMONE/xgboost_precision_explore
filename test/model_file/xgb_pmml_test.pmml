@@ -2,7 +2,7 @@
 <PMML xmlns="http://www.dmg.org/PMML-4_3" xmlns:data="http://jpmml.org/jpmml-model/InlineTable" version="4.3">
 	<Header>
 		<Application name="JPMML-SkLearn" version="1.5.12"/>
-		<Timestamp>2019-09-26T01:50:44Z</Timestamp>
+		<Timestamp>2019-09-27T01:47:48Z</Timestamp>
 	</Header>
 	<MiningBuildTask>
 		<Extension>PMMLPipeline(steps=[('mapper', DataFrameMapper(default=False, df_out=False,
@@ -4101,7 +4101,7 @@
 			</Segment>
 			<Segment id="2">
 				<True/>
-				<RegressionModel functionName="classification" normalizationMethod="logit" x-mathContext="float">
+				<RegressionModel functionName="classification" normalizationMethod="logit">
 					<MiningSchema>
 						<MiningField name="SURVIVED" usageType="target"/>
 						<MiningField name="xgbValue"/>

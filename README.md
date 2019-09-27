@@ -1,8 +1,16 @@
 # XGBoost的精度探索
 
-在使用xgboost时偶然发现python预测的结果和pmml预测的结果在小数位上存在差异，部分样本在6-7位小数位开始出现，即小数位上的数字不同，当样本足够多时，甚至可能在4-5位出现差异。（这不是四舍五入引起的精度差异）
+在使用xgboost时偶然发现python预测的结果和pmml预测的结果在小数位上存在差异，部分样本在6-7位小数位开始出现，即小数位上的数字不同，当样本足够多时，甚至可能在4-5位出现差异。如下面例子所示：
 
-为说明该精度差异具有普遍性，下面使用[泰坦尼克号](https://www.kaggle.com/c/titanic/data)的数据集进行探索。
+|	python预测结果|	pmml预测结果|
+| ----  | ----  |
+|	0.31833997|	0.31834|
+|	0.945738|	0.9457379|
+|	0.09169989|	0.091699906|
+|	0.09382419|	0.0938242|
+|	0.13024808|	0.1302481|
+
+为说明该精度差异具有普遍性，下面使用[泰坦尼克号](https://www.kaggle.com/c/titanic/data)的数据集进行测试。
 
 首先先说明两点:
 1. __XGBoost使用的是32位浮点，而其他模型是64位浮点，这个本质区别会使两者的精度差异不同。__
@@ -46,7 +54,7 @@ python预测结果和pmml预测结果对比如下，发现从第5位小数位开
 
 |        |样本数	 |占比|
 |  ----  | ----  | ----  |
-|完全一致|	232	|55.5024%|
+|完全一致|	223	|53.3493%|
 |前 1 位小数一致|	418	|100.0000%|
 |前 2 位小数一致|	418	|100.0000%|
 |前 3 位小数一致|	418	|100.0000%|
@@ -110,7 +118,7 @@ run_pmml_jar('java -jar pmml_predict/runpmml.jar data/X_test.csv model_file/xgb_
 
 |        |样本数	 |占比|
 |  ----  | ----  | ----  |
-|完全一致|	418	|55.5024%|
+|完全一致|	418	|100.0000%|
 |前 1 位小数一致|	418	|100.0000%|
 |前 2 位小数一致|	418	|100.0000%|
 |前 3 位小数一致|	418	|100.0000%|
@@ -140,7 +148,6 @@ sigmoid = lambda x: 1 / (1 + np.exp(-x))
 np.float32(sigmoid(np.float32(python_predict['python所有叶节点和']))).astype(str)
 ```
 
-
 * pmml：pmml同样默认64位浮点运算，为了得到32位浮点运算需要将所有子树叶结点值的和使用dataType="float"存储，并通过x-mathContext="float"告诉PMML引擎需要切换到32位浮点模式（[issues 15](https://github.com/jpmml/jpmml-xgboost/issues/15)），sigmoid运算使用的是normalizationMethod="logit"。
 
 而为了知道pmml的sigmoid运算具体是哪一步出了问题，分别对pmml文件进行下面三种修改：
@@ -159,8 +166,8 @@ np.float32(sigmoid(np.float32(python_predict['python所有叶节点和']))).asty
 ```xml
 <RegressionModel functionName="classification" normalizationMethod="logit">
 .....
-        <OutputField name="probability(0)" optype="continuous" feature="probability" value="0"/>
-        <OutputField name="probability(1)" optype="continuous" feature="probability" value="1"/>
+    <OutputField name="probability(0)" optype="continuous" feature="probability" value="0"/>
+    <OutputField name="probability(1)" optype="continuous" feature="probability" value="1"/>
 .....
 </RegressionModel>
 ```
@@ -186,8 +193,8 @@ np.float32(sigmoid(np.float32(python_predict['python所有叶节点和']))).asty
 ```xml
 <Segment id="1">
 ...
-        <Output>
-		<OutputField name="xgbValue" optype="continuous" dataType="float" feature="predictedValue" isFinalResult="false"/>
+    <Output>
+	       <OutputField name="xgbValue" optype="continuous" dataType="float" feature="predictedValue" isFinalResult="false"/>
 	</Output>
 ...
 </Segment>
@@ -308,7 +315,7 @@ evaluator = make_evaluator(backend, "xgb_pmml.pmml", reporting = True).verify()
 
 arguments = {
     "PCLASS" : 1,
-    "NAME" : 24,
+    "NAME" : 124,
     "SEX" : 1,
     "AGE" : 25.0,
     "SIBSP" : 0,
@@ -351,6 +358,10 @@ gateway.shutdown()
 |253|	1145|	0.0006451483151224302|	6.451483151224302E-4|
 |285|	1177|	0.0001686246198829013|	1.686246198829013E-4|
 |415|	1307|	0.00013847138974055706|	1.3847138974055706E-4|
+
+其实不是所有的LightGBM模型都是没有精度差异的，只是这个模型的python和pmml预测结果恰好一致而已，一般LightGBM模型也会有精度差异，但是差异非常之小，一般在15位小数后，而且样本非常之少，在1%左右，这个是可以接受的误差。
+
+对于LightGBM模型的pmml转换，有兴趣可以查看LightGBM作者与jpmml-lightgbm作者的讨论[issues 31](https://github.com/microsoft/LightGBM/issues/31)，这里有关于LightGBM精度差异的一些解释，因为底层实现与XGBoost不同，精度差异的原因也是完全不同的，这里我就没有对LightGBM模型的精度差异的具体原因进行探索了，有兴趣的可自行研究。
 
 ## 3 总结
 综上，由于XGBoost使用的是32位浮点，而pmml使用的是64位浮点，pmml树结构的各节点score因为只涉及到和运算，可以通过XGBoost的二进制文件精准转换得到，但是sigmoid运算却无法得到准确的32位浮点运算的结果，就算使用了第三方扩展属性 x-mathContext="float" 通知PMML引擎切换到32位浮点模式也无法精确地重现XGBoost预测，目前XGBoost精度差异无法避免，有两点使用建议：
